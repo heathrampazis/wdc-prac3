@@ -23,14 +23,14 @@ function post() {
     var date = new Date();
 
     var t = document.createElement('P');
-    t.classList.add('post_time');
+    t.classList.add('post-time');
     t.innerText = date;
     posts.appendChild(t);
 
     console.log(text.value);
 
     var p = document.createElement('P');
-    p.classList.add("post_content");
+    p.classList.add("post-content");
     p.innerText = text;
     posts.appendChild(p);
 
