@@ -43,3 +43,8 @@ h1,h2,h3 {
 hr {
     clear: both;
 }
+
+.post_time {
+    font-weight: bold;
+    color: grey;
+}
