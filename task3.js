@@ -43,3 +43,32 @@ function post() {
     //posts.innerText = text.innerText;
 
 }
+
+function hide1() {
+
+    var x = document.getElementById("main");
+    var y = document.getElementById("menu");
+
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+      y.style.display = "block";
+    }
+
+}
+
+function hide2() {
+
+    var x = document.getElementById("menu");
+    var y = document.getElementById("main");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+      y.style.display = "block";
+    }
+
+}
