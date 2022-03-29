@@ -1,6 +1,12 @@
 var count = 0;
 
+var blue = false;
+var red = false;
+
+var post_numbers = 0;
+
 function counter() {
+
     count = count + 1;
 
     var box = document.getElementById("mcount");
@@ -8,39 +14,47 @@ function counter() {
     box.innerText = count;
 
     console.log("This worked");
+
 }
 
 function post() {
 
     var posts = document.getElementById("posts");
     var text = document.getElementById("te").value;
-    
-    //var post = document.getElementsByClassName("post_content");
-    //var time = document.getElementsByClassName("post_time");
-    
-    //var text = document.getElementsByTagName("textarea");
 
-    var date = new Date();
-
-    var t = document.createElement('P');
-    t.classList.add('post-time');
-    t.innerText = date;
-    posts.appendChild(t);
+    var number_of_posts = document.getElementById("posts-amount").value;
 
     console.log(text.value);
 
-    var p = document.createElement('P');
-    p.classList.add("post-content");
-    p.innerText = text;
-    posts.appendChild(p);
+    for (var i = 0; i < number_of_posts; i ++) {
+      var date = new Date();
 
+      var t = document.createElement('P');
+      t.classList.add('post-time');
+      t.innerText = date;
+      posts.appendChild(t);
+  
+      var p;
 
-    //var test = document.createElement(time);
-
-    //time = date;
-
-    //posts.innerText = test + "\n" + post.value;
-    //posts.innerText = text.innerText;
+      if (document.getElementById("red_color").checked) {
+        p = document.createElement('P');
+        p.classList.add("post-content");
+        p.classList.add("red");
+        p.innerText = text;
+        posts.appendChild(p);
+      } else if (document.getElementById("blue_color").checked) {
+        p = document.createElement('P');
+        p.classList.add("post-content");
+        p.classList.add("blue");
+        p.innerText = text;
+        posts.appendChild(p);
+      } else {
+        p = document.createElement('P');
+        p.classList.add("post-content");
+        p.innerText = text;
+        posts.appendChild(p);
+      }
+    }
 
 }
 
@@ -70,5 +84,28 @@ function hide2() {
       x.style.display = "none";
       y.style.display = "block";
     }
+
+}
+
+function red_color() {
+
+  red = true;
+  blue = false;
+
+}
+
+function blue_color() {
+  
+  red = false;
+  blue = true;
+
+}
+
+function bgcolor() {
+
+  var background = document.getElementById("change_background");
+  var bg_color = document.getElementById("background_color");
+
+  bg_color.style.backgroundColor = background.value;
 
 }

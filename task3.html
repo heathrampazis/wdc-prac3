@@ -10,7 +10,7 @@
         
     </head>
 
-    <body>
+    <body id="background_color">
         
         <div id="main" class="container">
             <button class="right" onclick="hide1()">MENU</button>
@@ -21,12 +21,12 @@
             <textarea id="te" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
-                <input type="number" name="quantity" value="1" /><br />
-                <input type="radio" name="color" value="blue" /> Blue<br />
-                <input type="radio" name="color" value="red" /> Red<br />
+                <input type="number" name="quantity" value="1" id="posts-amount"/><br />
+                <input type="radio" name="color" value="blue" id="blue_color"/> Blue<br />
+                <input type="radio" name="color" value="red" id="red_color"/> Red<br />
                 <button onclick="post()">Post</button>
             </div>
-            <div class="controls left"> 
+            <div class="controls left">
                 <input type="range" name="visible" min="1" max="10" value="10"/><br />
                 <input type="checkbox" name="style" value="bold" /> Bold<br />
                 <input type="checkbox" name="style" value="italic" /> Italic<br />
@@ -40,7 +40,7 @@
         <div id="menu" class="container" style="display:none;">
             <button class="right" onclick="hide2()">BACK</button>
             <p>&nbsp;</p>
-            <span>Background Color:</span><input type="text">
+            <span>Background Color:</span><input type="text" id="change_background" onchange="bgcolor()">
         </div>
         
     </body>
