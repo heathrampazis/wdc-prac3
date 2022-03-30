@@ -7,9 +7,9 @@ var post_numbers = 0;
 
 function counter() {
 
-    count = count + 1;
-
     var box = document.getElementById("mcount");
+
+    count = count + 1;
 
     box.innerText = count;
 
@@ -30,11 +30,12 @@ function post() {
     console.log(text.value);
 
     for (var i = 0; i < number_of_posts; i ++) {
-      var date = new Date();
+      
+      var date_variable = new Date();
 
       t = document.createElement('P');
       t.classList.add('post-time');
-      t.innerText = date;
+      t.innerText = date_variable;
       posts.appendChild(t);
   
 
@@ -69,30 +70,30 @@ function post() {
 
 function hide1() {
 
-    var x = document.getElementById("main");
-    var y = document.getElementById("menu");
+    var main_items = document.getElementById("main");
+    var menu_items = document.getElementById("menu");
 
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      y.style.display = "none";
+    if (main_items.style.display === "none") {
+      main_items.style.display = "block";
+      menu_items.style.display = "none";
     } else {
-      x.style.display = "none";
-      y.style.display = "block";
+      main_items.style.display = "none";
+      menu_items.style.display = "block";
     }
 
 }
 
 function hide2() {
 
-    var x = document.getElementById("menu");
-    var y = document.getElementById("main");
+    var main_items = document.getElementById("main");
+    var menu_items = document.getElementById("menu");
 
-    if (x.style.display === "none") {
-      x.style.display = "block";
-      y.style.display = "none";
+    if (menu_items.style.display === "none") {
+      menu_items.style.display = "block";
+      main_items.style.display = "none";
     } else {
-      x.style.display = "none";
-      y.style.display = "block";
+      menu_items.style.display = "none";
+      main_items.style.display = "block";
     }
 
 }
@@ -117,9 +118,5 @@ function bgcolor() {
   var bg_color = document.getElementById("background_color");
 
   bg_color.style.backgroundColor = background.value;
-
-}
-
-function hide_post() {
 
 }
