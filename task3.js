@@ -122,26 +122,4 @@ function bgcolor() {
 
 function hide_post() {
 
-  var slider = document.getElementById("slide_bar").value;
-
-  var posts = document.getElementById("posts").children;
-
-  // posts.children
-
-  console.log("Number of posts : " + post_numbers);
-  console.log("Post length : " + posts.length);
-
-  // for (var i = 0; i < slider; i ++) {
-
-  //   if (i > slider) {
-  //     posts[i].style.display = "none";
-  //     posts[i+1].style.display = "none";
-  //     i = i + 2;
-  //   } else {
-  //     posts[i].style.display = "block";
-  //     posts[i+1].style.display = "block";
-  //     i = i + 2;
-  //   }
-  // }
-
 }
