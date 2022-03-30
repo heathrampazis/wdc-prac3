@@ -18,18 +18,18 @@
             <div id="mcount" onmouseover="counter()"></div>
             <div id="posts"></div>
             <hr />
-            <textarea id="te" rows="4" cols="60">Type your text here...</textarea>
+            <textarea id="text" rows="4" cols="60">Type your text here...</textarea>
             <br />
             <div class="controls left">
-                <input type="number" name="quantity" value="1" id="posts-amount"/><br />
+                <input type="number" name="quantity" value="1" id="posts_amount"/><br />
                 <input type="radio" name="color" value="blue" id="blue_color"/> Blue<br />
                 <input type="radio" name="color" value="red" id="red_color"/> Red<br />
                 <button onclick="post()">Post</button>
             </div>
             <div class="controls left">
-                <input type="range" name="visible" min="1" max="10" value="10"/><br />
-                <input type="checkbox" name="style" value="bold" /> Bold<br />
-                <input type="checkbox" name="style" value="italic" /> Italic<br />
+                <input type="range" name="visible" min="1" max="10" value="10" id="slide_bar" oninput="hide_post()"/><br />
+                <input type="checkbox" name="style" value="bold" id="bold_text"/> Bold<br />
+                <input type="checkbox" name="style" value="italic" id="italic_text"/> Italic<br />
                 <select>
                     <option disabled selected value="-1">Choose a post to reply to</option>
                 </select>
